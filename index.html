@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jai Bhole Tractors – Genuine Spare Parts</title>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron:   #E85D04;
+    --deep-red:  #9B1C1C;
+    --earth:     #7C4A03;
+    --mustard:   #F4A921;
+    --cream:     #FDF6E3;
+    --charcoal:  #1C1C1C;
+    --slate:     #3A3A3A;
+    --muted:     #7A7A7A;
+    --border:    #E0D6C0;
+    --green-ok:  #2D6A2D;
+    --white:     #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    min-height: 100vh;
+  }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--deep-red);
+    color: #fff;
+    font-size: 0.78rem;
+    padding: 6px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar a { color: var(--mustard); text-decoration: none; }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--charcoal);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 16px rgba(0,0,0,.45);
+  }
+  .logo-block {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+  }
+  .logo-emblem {
+    width: 52px; height: 52px;
+    background: var(--saffron);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    border: 3px solid var(--mustard);
+  }
+  .logo-text h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: .5px;
+    line-height: 1.1;
+  }
+  .logo-text p {
+    font-size: 0.72rem;
+    color: var(--mustard);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  nav {
+    display: flex;
+    gap: 4px;
+  }
+  nav button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.88rem;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background .2s, color .2s;
+  }
+  nav button:hover, nav button.active { background: var(--saffron); color: #fff; }
+
+  .cart-btn {
+    background: var(--saffron);
+    border: none;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background .2s;
+    flex-shrink: 0;
+  }
+  .cart-btn:hover { background: var(--deep-red); }
+  .cart-count {
+    background: var(--mustard);
+    color: var(--charcoal);
+    border-radius: 50%;
+    width: 20px; height: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--charcoal) 0%, #2d1a0a 60%, var(--earth) 100%);
+    padding: 56px 32px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    background: var(--saffron);
+    opacity: .07;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 10%;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: var(--mustard);
+    opacity: .06;
+  }
+  .hero-inner {
+    max-width: 740px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--mustard);
+    color: var(--charcoal);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+  .hero h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+  .hero h2 span { color: var(--saffron); }
+  .hero p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 560px;
+    margin-bottom: 28px;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { }
+  .hero-stat .num {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.1rem;
+    color: var(--mustard);
+    font-weight: 600;
+    line-height: 1;
+  }
+  .hero-stat .lbl {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  .section-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+    border-left: 5px solid var(--saffron);
+    padding-left: 14px;
+  }
+  .section-sub {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 28px;
+    padding-left: 19px;
+  }
+
+  /* ── BRAND GRID ── */
+  .brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .brand-card {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s;
+    position: relative;
+  }
+  .brand-card:hover {
+    border-color: var(--saffron);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(232,93,4,.14);
+  }
+  .brand-card.selected {
+    border-color: var(--saffron);
+    background: #fff5ee;
+  }
+  .brand-card.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 8px; right: 10px;
+    color: var(--saffron);
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .brand-icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 1.6rem;
+  }
+  .brand-name {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.2;
+  }
+  .brand-parts-count {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .brand-origin {
+    font-size: 0.68rem;
+    color: var(--saffron);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-top: 2px;
+  }
+
+  /* ── PARTS CATALOGUE ── */
+  #parts-section { display: none; }
+  .parts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .parts-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    color: var(--slate);
+    font-size: 0.8rem;
+    padding: 5px 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .18s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--saffron);
+    border-color: var(--saffron);
+    color: #fff;
+  }
+
+  .parts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .part-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .part-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,.1);
+    transform: translateY(-2px);
+  }
+  .part-card-top {
+    background: linear-gradient(135deg, #f0e8d0, #fdf6e3);
+    padding: 18px 16px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .part-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+  .part-info { flex: 1; min-width: 0; }
+  .part-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    line-height: 1.3;
+  }
+  .part-no {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .part-card-bottom {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+  }
+  .part-price {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.25rem;
+    color: var(--deep-red);
+    font-weight: 600;
+  }
+  .part-price span {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+  }
+  .qty-ctrl {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .qty-btn {
+    width: 28px; height: 28px;
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    display: flex; align-items: center; justify-content: center;
+    transition: all .15s;
+  }
+  .qty-btn:hover { background: var(--saffron); border-color: var(--saffron); color: #fff; }
+  .qty-num {
+    min-width: 22px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .add-btn {
+    background: var(--saffron);
+    border: none;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .add-btn:hover { background: var(--deep-red); }
+  .add-btn.added { background: var(--green-ok); }
+
+  /* ── CART PANEL ── */
+  .cart-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 200;
+  }
+  .cart-panel {
+    position: fixed;
+    top: 0; right: -480px;
+    width: 460px;
+    max-width: 98vw;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: -6px 0 32px rgba(0,0,0,.2);
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    transition: right .3s ease;
+  }
+  .cart-panel.open { right: 0; }
+  .cart-overlay.open { display: block; }
+  .cart-head {
+    background: var(--charcoal);
+    color: #fff;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cart-head h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4rem;
+  }
+  .close-cart {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 1.4rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .close-cart:hover { color: #fff; }
+  .cart-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 20px;
+  }
+  .cart-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+  }
+  .cart-empty .ei { font-size: 3rem; margin-bottom: 12px; }
+  .cart-item {
+    display: flex;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  .cart-item-icon { font-size: 1.5rem; flex-shrink: 0; padding-top: 2px; }
+  .cart-item-details { flex: 1; min-width: 0; }
+  .cart-item-name { font-weight: 600; font-size: 0.88rem; }
+  .cart-item-brand { font-size: 0.75rem; color: var(--saffron); }
+  .cart-item-price { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+  .cart-item-qty-ctrl { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+  .cart-remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 1.1rem;
+    transition: color .15s;
+    flex-shrink: 0;
+  }
+  .cart-remove:hover { color: var(--deep-red); }
+  .cart-item-subtotal {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.05rem;
+    color: var(--deep-red);
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .cart-foot {
+    background: #f7f2e8;
+    padding: 18px 22px;
+    border-top: 1.5px solid var(--border);
+  }
+  .cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .cart-total-label { font-weight: 600; font-size: 0.9rem; }
+  .cart-total-amt {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    color: var(--deep-red);
+  }
+  .checkout-btn {
+    width: 100%;
+    background: var(--saffron);
+    border: none;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+    padding: 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .checkout-btn:hover { background: var(--deep-red); }
+
+  /* ── ORDER MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--white);
+    border-radius: 12px;
+    width: 500px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  }
+  .modal-head {
+    background: var(--charcoal);
+    color: #fff;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-head h3 { font-family: 'Teko', sans-serif; font-size: 1.3rem; }
+  .close-modal { background: none; border: none; color: #ccc; font-size: 1.3rem; cursor: pointer; }
+  .close-modal:hover { color: #fff; }
+  .modal-body { padding: 22px; }
+  .modal-body label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--slate);
+    margin-bottom: 5px;
+    margin-top: 14px;
+  }
+  .modal-body label:first-child { margin-top: 0; }
+  .modal-body input, .modal-body textarea, .modal-body select {
+    width: 100%;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--charcoal);
+    background: var(--cream);
+    transition: border-color .2s;
+  }
+  .modal-body input:focus, .modal-body textarea:focus {
+    outline: none;
+    border-color: var(--saffron);
+  }
+  .modal-body textarea { resize: vertical; min-height: 80px; }
+  .order-summary-box {
+    background: #f7f2e8;
+    border-radius: 8px;
+    padding: 14px;
+    margin-top: 14px;
+    font-size: 0.82rem;
+  }
+  .order-summary-box .osi {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .order-summary-box .osi:last-child { border-bottom: none; }
+  .order-summary-box .total-row {
+    font-weight: 700;
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: var(--deep-red);
+    display: flex;
+    justify-content: space-between;
+  }
+  .place-order-btn {
+    width: 100%;
+    margin-top: 18px;
+    background: var(--green-ok);
+    border: none;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .place-order-btn:hover { background: #1a4a1a; }
+
+  /* ── SUCCESS ── */
+  .success-screen {
+    text-align: center;
+    padding: 32px 20px;
+  }
+  .success-screen .check { font-size: 3rem; margin-bottom: 12px; }
+  .success-screen h4 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.6rem;
+    color: var(--green-ok);
+    margin-bottom: 8px;
+  }
+  .success-screen p { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+
+  /* ── ADMIN PANEL ── */
+  #admin-section { display: none; }
+  .admin-topbar {
+    background: var(--charcoal);
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .admin-topbar h3 { font-family: 'Teko', sans-serif; font-size: 1.3rem; }
+  .admin-gate {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 32px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .admin-gate h4 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+  .admin-gate input {
+    width: 100%;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  .admin-gate button {
+    width: 100%;
+    background: var(--saffron);
+    border: none;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .admin-gate button:hover { background: var(--deep-red); }
+  .admin-error { color: var(--deep-red); font-size: 0.82rem; margin-top: 8px; display: none; }
+  .admin-content { display: none; }
+
+  .admin-brand-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .admin-brand-tab {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all .2s;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  .admin-brand-tab:hover, .admin-brand-tab.active {
+    background: var(--saffron);
+    border-color: var(--saffron);
+    color: #fff;
+  }
+
+  .admin-parts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    font-size: 0.85rem;
+  }
+  .admin-parts-table th {
+    background: var(--charcoal);
+    color: #fff;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .admin-parts-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .admin-parts-table tr:last-child td { border-bottom: none; }
+  .admin-parts-table tr:hover td { background: #fdf6e3; }
+  .admin-edit-input {
+    border: 1.5px solid var(--border);
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.84rem;
+    width: 100%;
+    max-width: 200px;
+    background: var(--cream);
+  }
+  .admin-edit-input:focus { outline: none; border-color: var(--saffron); }
+  .save-row-btn {
+    background: var(--green-ok);
+    border: none;
+    color: #fff;
+    font-size: 0.78rem;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .del-row-btn {
+    background: var(--deep-red);
+    border: none;
+    color: #fff;
+    font-size: 0.78rem;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  .add-part-form {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-top: 20px;
+  }
+  .add-part-form h4 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+    color: var(--charcoal);
+  }
+  .add-part-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: end;
+  }
+  @media (max-width:768px) { .add-part-grid { grid-template-columns: 1fr 1fr; } }
+  .add-part-grid input, .add-part-grid select {
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.84rem;
+    width: 100%;
+    background: var(--cream);
+  }
+  .add-part-grid input:focus, .add-part-grid select:focus {
+    outline: none; border-color: var(--saffron);
+  }
+  .add-part-grid label { font-size: 0.78rem; font-weight: 600; color: var(--slate); display: block; margin-bottom: 4px; }
+  .add-part-btn {
+    background: var(--saffron);
+    border: none;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .add-part-btn:hover { background: var(--deep-red); }
+
+  /* ── ABOUT ── */
+  #about-section {
+    display: none;
+  }
+  .about-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+    line-height: 1.75;
+    font-size: 0.92rem;
+    color: var(--slate);
+  }
+  .about-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+  }
+  .about-card p { margin-bottom: 12px; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  @media (max-width:600px) { .contact-grid { grid-template-columns: 1fr; } }
+  .contact-item {
+    background: var(--cream);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+  }
+  .contact-item strong { color: var(--saffron); font-size: 0.8rem; text-transform: uppercase; letter-spacing: .8px; }
+  .contact-item p { margin: 4px 0 0; font-size: 0.92rem; color: var(--charcoal); }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--charcoal);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    z-index: 500;
+    transition: transform .3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(0,0,0,.3);
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+  .toast.success { border-left: 4px solid var(--green-ok); }
+  .toast.error { border-left: 4px solid var(--deep-red); }
+
+  /* ── LOW STOCK ALERT MODAL ── */
+  .alert-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 400;
+    align-items: center;
+    justify-content: center;
+  }
+  .alert-modal-overlay.open { display: flex; }
+  .alert-modal-box {
+    background: var(--white);
+    border-radius: 14px;
+    width: 560px;
+    max-width: 96vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 64px rgba(0,0,0,.35);
+    border-top: 5px solid var(--deep-red);
+  }
+  .alert-modal-head {
+    background: linear-gradient(135deg, #7f1d1d, var(--deep-red));
+    color: #fff;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 9px 9px 0 0;
+  }
+  .alert-modal-head h3 { font-family: 'Teko', sans-serif; font-size: 1.35rem; }
+  .close-alert-modal { background: none; border: none; color: #ffb; font-size: 1.3rem; cursor: pointer; }
+  .close-alert-modal:hover { color: #fff; }
+  .alert-modal-body { padding: 22px; }
+  .alert-intro {
+    background: #fff5f5;
+    border: 1.5px solid #fecaca;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    color: var(--deep-red);
+    margin-bottom: 16px;
+    line-height: 1.55;
+  }
+  .alert-parts-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+  .alert-part-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fef2f2;
+    border: 1.5px solid #fca5a5;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .alert-part-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .alert-part-info { flex: 1; min-width: 0; }
+  .alert-part-name { font-weight: 600; font-size: 0.88rem; color: var(--charcoal); }
+  .alert-part-meta { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+  .alert-stock-badge {
+    background: var(--deep-red);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .alert-stock-badge.zero { background: #111; }
+  .alert-actions { display: flex; flex-direction: column; gap: 10px; }
+  .alert-action-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--slate);
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    margin-bottom: 4px;
+  }
+  .alert-send-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .alert-email-btn {
+    flex: 1;
+    background: var(--charcoal);
+    border: none;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.05rem;
+    padding: 11px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background .2s;
+    text-decoration: none;
+  }
+  .alert-email-btn:hover { background: #000; }
+  .alert-wa-btn {
+    flex: 1;
+    background: #25D366;
+    border: none;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.05rem;
+    padding: 11px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background .2s;
+    text-decoration: none;
+  }
+  .alert-wa-btn:hover { background: #128C4E; }
+  .alert-dismiss-btn {
+    width: 100%;
+    background: none;
+    border: 1.5px solid var(--border);
+    color: var(--muted);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.85rem;
+    padding: 9px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all .2s;
+  }
+  .alert-dismiss-btn:hover { border-color: var(--saffron); color: var(--saffron); }
+
+  /* low-stock indicator badge on admin table rows */
+  .low-stock-row td { background: #fff5f5 !important; }
+  .stock-warn { color: var(--deep-red); font-weight: 700; }
+
+  /* blinking bell in header when alerts pending */
+  .alert-bell {
+    display: none;
+    background: var(--deep-red);
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    animation: bellRing .8s ease infinite alternate;
+    flex-shrink: 0;
+  }
+  .alert-bell.visible { display: flex; align-items: center; gap: 6px; }
+  @keyframes bellRing {
+    from { transform: rotate(-8deg); }
+    to   { transform: rotate(8deg); }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal);
+    color: #888;
+    text-align: center;
+    padding: 22px;
+    font-size: 0.78rem;
+    margin-top: 40px;
+    border-top: 3px solid var(--saffron);
+  }
+  footer span { color: var(--mustard); }
+
+  /* ── UTILS ── */
+  .hidden { display: none !important; }
+  .divider { height: 1.5px; background: var(--border); margin: 10px 0 32px; }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>📍 Main By-Pass Road, Kiraoli, Agra – 283122 &nbsp;|&nbsp; Genuine OEM Tractor Parts</span>
+  <span>📞 <a href="tel:+918630015215">86300 15215</a> &nbsp;/&nbsp; <a href="tel:+919412560816">94125 60816</a> &nbsp;|&nbsp; Mon–Sat, 9 AM – 7 PM</span>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-block">
+    <div class="logo-emblem">JB</div>
+    <div class="logo-text">
+      <h1>Jai Bhole Tractors</h1>
+      <p>Genuine Spare Parts Dealer</p>
+    </div>
+  </div>
+  <nav>
+    <button class="active" onclick="showSection('home')">Home</button>
+    <button onclick="showSection('catalogue')">Catalogue</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('admin')">Operator</button>
+  </nav>
+  <button class="alert-bell" id="alert-bell-btn" onclick="openAlertModal()" title="Low stock alerts">
+    🔔 <span id="alert-bell-count">0</span> Low Stock
+  </button>
+  <button class="cart-btn" onclick="openCart()">
+    🛒 Cart <span class="cart-count" id="cart-count">0</span>
+  </button>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="home-section">
+  <div class="hero-inner">
+    <div class="hero-badge">✦ Authorised Genuine Parts Dealer</div>
+    <h2>Khet ka kaam,<br><span>ek hi naam.</span></h2>
+    <p>Jai Bhole Tractors stocks original spare parts for every leading tractor brand — from Sonalika to John Deere. Right part, right price, delivered fast across Agra and western U.P.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">6+</div><div class="lbl">Brands</div></div>
+      <div class="hero-stat"><div class="num">200+</div><div class="lbl">Part Numbers</div></div>
+      <div class="hero-stat"><div class="num">15+</div><div class="lbl">Years in Business</div></div>
+      <div class="hero-stat"><div class="num">24 hr</div><div class="lbl">Order Processing</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOME CATALOGUE SECTION -->
+<div id="home-body-section">
+<div class="section">
+  <div class="section-title">Our Brand Catalogue</div>
+  <div class="section-sub">Select a brand below to browse genuine spare parts and add them to your order.</div>
+  <div class="brand-grid" id="brand-grid">
+    <!-- Rendered by JS -->
+  </div>
+  <div class="section-title" style="margin-top:8px;">Browse Parts</div>
+  <div class="section-sub">Click on any brand card above — or browse all parts here.</div>
+  <div class="parts-header">
+    <div class="parts-filter" id="category-filter">
+      <button class="filter-btn active" onclick="filterCategory('all', this)">All Categories</button>
+      <button class="filter-btn" onclick="filterCategory('engine', this)">Engine</button>
+      <button class="filter-btn" onclick="filterCategory('transmission', this)">Transmission</button>
+      <button class="filter-btn" onclick="filterCategory('hydraulic', this)">Hydraulic</button>
+      <button class="filter-btn" onclick="filterCategory('electrical', this)">Electrical</button>
+      <button class="filter-btn" onclick="filterCategory('filters', this)">Filters</button>
+      <button class="filter-btn" onclick="filterCategory('linkage', this)">Linkage</button>
+      <button class="filter-btn" onclick="filterCategory('brakes', this)">Brakes</button>
+    </div>
+    <div style="font-size:0.8rem;color:var(--muted);">
+      Showing <strong id="parts-shown-count">0</strong> parts
+    </div>
+  </div>
+  <div class="parts-grid" id="main-parts-grid"></div>
+</div>
+</div>
+
+<!-- CATALOGUE PAGE (alt view) -->
+<div id="catalogue-section" style="display:none;">
+  <div class="section">
+    <div class="section-title">Full Parts Catalogue</div>
+    <div class="section-sub">Browse all available parts by brand and category.</div>
+    <div class="admin-brand-tabs" id="cat-brand-tabs"></div>
+    <div class="parts-grid" id="cat-parts-grid"></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about-section">
+  <div class="section">
+    <div class="section-title">About Us</div>
+    <div class="section-sub">Serving farmers of Agra & surrounding districts since 2008.</div>
+    <div class="about-card">
+      <h3>🚜 Jai Bhole Tractors – Kiraoli, Agra, U.P.</h3>
+      <p>We are an authorised dealer of genuine tractor spare parts, proudly serving the farming communities of Agra, Mathura, Firozabad, and surrounding regions. Founded in 2008, our shop has grown from a small roadside store to one of the most trusted parts dealerships in western Uttar Pradesh.</p>
+      <p>We stock parts for all major tractor brands — including Sonalika, Eicher, Mahindra, John Deere, Swaraj, and New Holland. Every part we sell is genuine OEM or approved aftermarket quality, tested for reliability in Indian field conditions.</p>
+      <p><strong>Our promise:</strong> Right part the first time. If we don't have it in stock, we'll source it within 48 hours.</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <strong>📍 Address</strong>
+          <p>Main By-Pass Road, Kiraoli,<br>Agra, Uttar Pradesh – 283122</p>
+        </div>
+        <div class="contact-item">
+          <strong>📞 Phone / WhatsApp</strong>
+          <p><a href="tel:+918630015215" style="color:var(--saffron);text-decoration:none;">+91 86300 15215</a><br>
+             <a href="tel:+919412560816" style="color:var(--saffron);text-decoration:none;">+91 94125 60816</a></p>
+        </div>
+        <div class="contact-item">
+          <strong>✉️ Email</strong>
+          <p><a href="mailto:jaibholetractors@gmail.com" style="color:var(--saffron);text-decoration:none;">jaibholetractors@gmail.com</a></p>
+        </div>
+        <div class="contact-item">
+          <strong>⏰ Business Hours</strong>
+          <p>Mon – Sat: 9:00 AM to 7:00 PM<br>Sunday: 10:00 AM to 2:00 PM</p>
+        </div>
+        <div class="contact-item">
+          <strong>📦 Delivery</strong>
+          <p>Same-day delivery within Kiraoli/Agra. Pan-UP courier within 2–3 days.</p>
+        </div>
+        <div class="contact-item">
+          <strong>💬 WhatsApp Orders</strong>
+          <p><a href="https://wa.me/918630015215" target="_blank" style="color:var(--saffron);text-decoration:none;">Message us on WhatsApp →</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN SECTION -->
+<div id="admin-section">
+  <div class="section">
+    <div class="admin-topbar">
+      <h3>⚙️ Operator Panel – Inventory Management</h3>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button onclick="openAlertModal()" style="background:var(--deep-red);border:none;color:#fff;padding:7px 16px;border-radius:6px;cursor:pointer;font-size:0.82rem;display:flex;align-items:center;gap:6px;">
+          🔔 Low Stock Alert
+        </button>
+        <button onclick="logoutAdmin()" style="background:#444;border:none;color:#fff;padding:7px 16px;border-radius:6px;cursor:pointer;font-size:0.82rem;" id="logout-btn" class="hidden">Logout</button>
+      </div>
+    </div>
+
+    <!-- Gate -->
+    <div class="admin-gate" id="admin-gate">
+      <h4>🔐 Operator Login</h4>
+      <input type="password" id="admin-pass" placeholder="Enter PIN" onkeydown="if(event.key==='Enter')loginAdmin()">
+      <button onclick="loginAdmin()">Login</button>
+      <p class="admin-error" id="admin-error">Incorrect PIN. Try again.</p>
+      <p style="font-size:0.75rem;color:var(--muted);margin-top:14px;">Default PIN: 1234</p>
+    </div>
+
+    <!-- Admin content -->
+    <div class="admin-content" id="admin-content">
+      <div class="admin-brand-tabs" id="admin-brand-tabs"></div>
+      <table class="admin-parts-table" id="admin-parts-table">
+        <thead>
+          <tr>
+            <th>Part Name</th>
+            <th>Part No.</th>
+            <th>Category</th>
+            <th>Price (₹)</th>
+            <th>Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="admin-parts-body"></tbody>
+      </table>
+      <div class="add-part-form">
+        <h4>➕ Add New Part</h4>
+        <div class="add-part-grid">
+          <div>
+            <label>Brand</label>
+            <select id="new-brand"></select>
+          </div>
+          <div>
+            <label>Part Name</label>
+            <input id="new-name" placeholder="e.g. Clutch Plate">
+          </div>
+          <div>
+            <label>Part Number</label>
+            <input id="new-partno" placeholder="e.g. SNL-CP-001">
+          </div>
+          <div>
+            <label>Category</label>
+            <select id="new-category">
+              <option value="engine">Engine</option>
+              <option value="transmission">Transmission</option>
+              <option value="hydraulic">Hydraulic</option>
+              <option value="electrical">Electrical</option>
+              <option value="filters">Filters</option>
+              <option value="linkage">Linkage</option>
+              <option value="brakes">Brakes</option>
+            </select>
+          </div>
+          <div>
+            <label>Price (₹)</label>
+            <input id="new-price" type="number" placeholder="e.g. 1200">
+          </div>
+          <div>
+            <label>Stock Qty</label>
+            <input id="new-stock" type="number" placeholder="e.g. 10">
+          </div>
+          <div>
+            <label>Icon (emoji)</label>
+            <input id="new-icon" placeholder="e.g. 🔩" maxlength="4">
+          </div>
+          <div>
+            <label>&nbsp;</label>
+            <button class="add-part-btn" onclick="addNewPart()">+ Add Part</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART OVERLAY + PANEL -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-head">
+    <h3>🛒 Your Order</h3>
+    <button class="close-cart" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <div class="cart-empty">
+      <div class="ei">📦</div>
+      <p>Your cart is empty.<br>Browse the catalogue and add parts.</p>
+    </div>
+  </div>
+  <div class="cart-foot" id="cart-foot" style="display:none;">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total Amount</span>
+      <span class="cart-total-amt" id="cart-total-amt">₹0</span>
+    </div>
+    <button class="checkout-btn" onclick="openOrderModal()">Place Order →</button>
+  </div>
+</div>
+
+<!-- ORDER MODAL -->
+<div class="modal-overlay" id="order-modal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3>📋 Confirm Your Order</h3>
+      <button class="close-modal" onclick="closeOrderModal()">✕</button>
+    </div>
+    <div class="modal-body" id="order-modal-body">
+      <label>Your Name *</label>
+      <input id="cust-name" placeholder="Enter your full name">
+      <label>Phone Number *</label>
+      <input id="cust-phone" placeholder="+91 XXXXX XXXXX" type="tel">
+      <label>Village / Town / District</label>
+      <input id="cust-address" placeholder="e.g. Milak, Rampur, UP">
+      <label>Tractor Model (optional)</label>
+      <input id="cust-tractor" placeholder="e.g. Sonalika DI 50">
+      <label>Additional Notes</label>
+      <textarea id="cust-notes" placeholder="Any special instructions..."></textarea>
+      <label>Delivery Preference</label>
+      <select id="cust-delivery">
+        <option value="pickup">Self Pickup from Shop</option>
+        <option value="local">Local Delivery (Kiraoli / Agra)</option>
+        <option value="courier">Courier (Pan-UP, 2–3 days)</option>
+      </select>
+      <div class="order-summary-box">
+        <strong style="font-size:0.8rem;display:block;margin-bottom:8px;">Order Summary</strong>
+        <div id="order-summary-items"></div>
+        <div class="total-row">
+          <span>Total</span>
+          <span id="order-summary-total"></span>
+        </div>
+      </div>
+      <button class="place-order-btn" onclick="placeOrder()">✔ Confirm & Place Order</button>
+    </div>
+  </div>
+</div>
+
+<!-- LOW STOCK ALERT MODAL -->
+<div class="alert-modal-overlay" id="alert-modal">
+  <div class="alert-modal-box">
+    <div class="alert-modal-head">
+      <h3>🔔 Low Stock Alert</h3>
+      <button class="close-alert-modal" onclick="closeAlertModal()">✕</button>
+    </div>
+    <div class="alert-modal-body">
+      <div class="alert-intro" id="alert-intro-text">
+        ⚠️ The following parts have fallen below 5 units in stock. Please reorder soon to avoid running out.
+      </div>
+      <div class="alert-parts-list" id="alert-parts-list"></div>
+      <div class="alert-actions">
+        <div class="alert-action-label">Send Alert to Operator</div>
+        <div class="alert-send-btns">
+          <a id="alert-email-link" href="#" target="_blank" class="alert-email-btn">
+            ✉️ Send via Email
+          </a>
+          <a id="alert-wa-link" href="#" target="_blank" class="alert-wa-btn">
+            💬 Send via WhatsApp
+          </a>
+        </div>
+        <button class="alert-dismiss-btn" onclick="closeAlertModal()">Dismiss for now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<footer>
+  <strong style="color:#fff;">Jai Bhole Tractors</strong> &nbsp;|&nbsp; Main By-Pass Road, Kiraoli, <span>Agra, U.P. – 283122</span> &nbsp;|&nbsp; 📞 86300 15215 / 94125 60816 &nbsp;|&nbsp; ✉️ jaibholetractors@gmail.com &nbsp;|&nbsp; All prices inclusive of GST &nbsp;|&nbsp; © 2025
+</footer>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────────────────
+const BRANDS = [
+  { id:'sonalika', name:'Sonalika', icon:'🌾', color:'#1565C0', bg:'#E3F2FD', origin:'Indian' },
+  { id:'eicher',   name:'Eicher',   icon:'🔶', color:'#E65100', bg:'#FFF3E0', origin:'Indian' },
+  { id:'mahindra', name:'Mahindra', icon:'🔵', color:'#1A237E', bg:'#E8EAF6', origin:'Indian' },
+  { id:'johndeere',name:'John Deere',icon:'🟡', color:'#1B5E20', bg:'#E8F5E9', origin:'American' },
+  { id:'swaraj',   name:'Swaraj',   icon:'🟠', color:'#BF360C', bg:'#FBE9E7', origin:'Indian' },
+  { id:'newholland',name:'New Holland',icon:'🔷',color:'#0D47A1', bg:'#E3F2FD', origin:'Italian' },
+];
+
+let partsDB = [
+  // SONALIKA
+  { id:1, brand:'sonalika', name:'Clutch Plate',           partNo:'SNL-10024079', category:'transmission', price:1850, stock:12, icon:'⚙️' },
+  { id:2, brand:'sonalika', name:'Hydraulic Pump Assembly', partNo:'SNL-HYD-001',  category:'hydraulic',    price:6200, stock:5,  icon:'💧' },
+  { id:3, brand:'sonalika', name:'Air Filter',              partNo:'SNL-AF-035',   category:'filters',      price:480,  stock:30, icon:'🌀' },
+  { id:4, brand:'sonalika', name:'Oil Filter',              partNo:'SNL-OF-012',   category:'filters',      price:320,  stock:25, icon:'🔘' },
+  { id:5, brand:'sonalika', name:'Piston Ring Set',         partNo:'SNL-PRS-06',   category:'engine',       price:2400, stock:8,  icon:'🔩' },
+  { id:6, brand:'sonalika', name:'Top Link Assembly',       partNo:'SNL-TL-025S',  category:'linkage',      price:1650, stock:7,  icon:'🔗' },
+  { id:7, brand:'sonalika', name:'Steering Wheel',          partNo:'SNL-SW-002',   category:'electrical',   price:1200, stock:10, icon:'🎛️' },
+  { id:8, brand:'sonalika', name:'Brake Plate',             partNo:'SNL-BP-014',   category:'brakes',       price:950,  stock:15, icon:'🛑' },
+
+  // EICHER
+  { id:9,  brand:'eicher', name:'Hydraulic Lift Pump',     partNo:'ECH-5660-HLP', category:'hydraulic',    price:7800, stock:4,  icon:'💧' },
+  { id:10, brand:'eicher', name:'Piston (Complete)',        partNo:'ECH-PST-485',  category:'engine',       price:3200, stock:6,  icon:'🔩' },
+  { id:11, brand:'eicher', name:'Spindle Bush (380)',       partNo:'ECH-SB-380',   category:'transmission', price:540,  stock:20, icon:'⚙️' },
+  { id:12, brand:'eicher', name:'Front Jali / Grill',      partNo:'ECH-FJ-485',   category:'electrical',   price:1100, stock:8,  icon:'🔲' },
+  { id:13, brand:'eicher', name:'Top Link Assy (Small)',    partNo:'ECH-TL-380',   category:'linkage',      price:1400, stock:9,  icon:'🔗' },
+  { id:14, brand:'eicher', name:'Oil Filter',               partNo:'ECH-OF-ACC',   category:'filters',      price:380,  stock:22, icon:'🔘' },
+  { id:15, brand:'eicher', name:'Tie Rod End',              partNo:'ECH-TRE-485',  category:'transmission', price:780,  stock:14, icon:'🔧' },
+  { id:16, brand:'eicher', name:'Fan Belt 1135',            partNo:'ECH-FB-1135',  category:'engine',       price:420,  stock:18, icon:'〰️' },
+
+  // MAHINDRA
+  { id:17, brand:'mahindra', name:'Clutch Cover Assembly', partNo:'MHD-P2-006515', category:'transmission', price:4800, stock:5,  icon:'⚙️' },
+  { id:18, brand:'mahindra', name:'Piston Ring Set 4500',  partNo:'MHD-PRS-4500',  category:'engine',       price:2200, stock:9,  icon:'🔩' },
+  { id:19, brand:'mahindra', name:'NST Top Link Assy',     partNo:'MHD-TL-NST',    category:'linkage',      price:1900, stock:7,  icon:'🔗' },
+  { id:20, brand:'mahindra', name:'Hydraulic Arm',         partNo:'MHD-HA-575',    category:'hydraulic',    price:3600, stock:4,  icon:'💧' },
+  { id:21, brand:'mahindra', name:'Air Filter (Di)',       partNo:'MHD-AF-DI',     category:'filters',      price:510,  stock:28, icon:'🌀' },
+  { id:22, brand:'mahindra', name:'Levelling Assembly',    partNo:'MHD-LA-B275',   category:'linkage',      price:2100, stock:6,  icon:'🔗' },
+  { id:23, brand:'mahindra', name:'Silencer Assembly',     partNo:'MHD-SIL-575',   category:'engine',       price:2800, stock:3,  icon:'🔇' },
+  { id:24, brand:'mahindra', name:'Seal Kit Steering',     partNo:'MHD-SK-STR',    category:'hydraulic',    price:680,  stock:16, icon:'🔒' },
+
+  // JOHN DEERE
+  { id:25, brand:'johndeere', name:'Hydraulic Pump RE227447', partNo:'JD-RE227447',  category:'hydraulic',    price:9800, stock:3,  icon:'💧' },
+  { id:26, brand:'johndeere', name:'Clutch Lever Kit PTO',    partNo:'JD-CLK-PTO',   category:'transmission', price:2100, stock:8,  icon:'⚙️' },
+  { id:27, brand:'johndeere', name:'Clutch Lever Main',       partNo:'JD-CLK-MAIN',  category:'transmission', price:1950, stock:10, icon:'⚙️' },
+  { id:28, brand:'johndeere', name:'Head Gasket',             partNo:'JD-HG-5045',   category:'engine',       price:1400, stock:7,  icon:'🔩' },
+  { id:29, brand:'johndeere', name:'Gear Lever Boot',         partNo:'JD-GLB-5050',  category:'transmission', price:650,  stock:20, icon:'🔧' },
+  { id:30, brand:'johndeere', name:'Oil Brake Plate 14T',     partNo:'JD-OBP-14',    category:'brakes',       price:1600, stock:11, icon:'🛑' },
+  { id:31, brand:'johndeere', name:'Rear Indicator',          partNo:'JD-RI-5036',   category:'electrical',   price:420,  stock:25, icon:'💡' },
+  { id:32, brand:'johndeere', name:'Wheel Weight',            partNo:'JD-WW-5055',   category:'engine',       price:5500, stock:4,  icon:'⚖️' },
+
+  // SWARAJ
+  { id:33, brand:'swaraj', name:'Oil Brake Plate 855',  partNo:'SW-OBP-855',   category:'brakes',       price:1400, stock:12, icon:'🛑' },
+  { id:34, brand:'swaraj', name:'Top Link Assy 855',    partNo:'SW-TL-855',    category:'linkage',      price:1700, stock:8,  icon:'🔗' },
+  { id:35, brand:'swaraj', name:'Spindle Repair Kit',   partNo:'SW-SRK-735',   category:'transmission', price:2800, stock:5,  icon:'⚙️' },
+  { id:36, brand:'swaraj', name:'Hitch Pin',            partNo:'SW-HP-ALL',    category:'linkage',      price:380,  stock:35, icon:'📌' },
+  { id:37, brand:'swaraj', name:'Engine Filter Kit',    partNo:'SW-FK-5049',   category:'filters',      price:890,  stock:18, icon:'🌀' },
+  { id:38, brand:'swaraj', name:'Stay Bar Assembly',    partNo:'SW-SBA-NEW',   category:'linkage',      price:1050, stock:9,  icon:'🔗' },
+
+  // NEW HOLLAND
+  { id:39, brand:'newholland', name:'Oil Immersed Brake Plate', partNo:'NH-OBP-CNH',  category:'brakes',       price:2200, stock:7,  icon:'🛑' },
+  { id:40, brand:'newholland', name:'Hydraulic Pump Assy',      partNo:'NH-HPA-001',   category:'hydraulic',    price:8900, stock:3,  icon:'💧' },
+  { id:41, brand:'newholland', name:'Engine Filter Kit',        partNo:'NH-FK-1296',   category:'filters',      price:1100, stock:14, icon:'🌀' },
+  { id:42, brand:'newholland', name:'Clutch Plate',             partNo:'NH-CP-TM',     category:'transmission', price:2600, stock:6,  icon:'⚙️' },
+];
+
+let cart = [];
+let selectedBrandFilter = 'all';
+let selectedCategoryFilter = 'all';
+let adminBrandFilter = BRANDS[0].id;
+let catBrandFilter = BRANDS[0].id;
+
+// ─── RENDER BRANDS ───────────────────────────────────────────────────────────
+function renderBrands() {
+  const grid = document.getElementById('brand-grid');
+  grid.innerHTML = BRANDS.map(b => {
+    const count = partsDB.filter(p => p.brand === b.id).length;
+    return `<div class="brand-card ${selectedBrandFilter===b.id?'selected':''}" onclick="selectBrand('${b.id}')">
+      <div class="brand-icon" style="background:${b.bg};color:${b.color};font-size:1.6rem;">${b.icon}</div>
+      <div class="brand-name">${b.name}</div>
+      <div class="brand-parts-count">${count} parts available</div>
+      <div class="brand-origin">${b.origin}</div>
+    </div>`;
+  }).join('');
+}
+
+function selectBrand(brandId) {
+  selectedBrandFilter = selectedBrandFilter === brandId ? 'all' : brandId;
+  renderBrands();
+  renderMainParts();
+}
+
+// ─── RENDER PARTS GRID ───────────────────────────────────────────────────────
+function renderMainParts() {
+  let filtered = partsDB;
+  if (selectedBrandFilter !== 'all') filtered = filtered.filter(p => p.brand === selectedBrandFilter);
+  if (selectedCategoryFilter !== 'all') filtered = filtered.filter(p => p.category === selectedCategoryFilter);
+
+  document.getElementById('parts-shown-count').textContent = filtered.length;
+  const grid = document.getElementById('main-parts-grid');
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);">No parts found for the selected filters.</div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(p => renderPartCard(p)).join('');
+}
+
+function renderPartCard(p) {
+  const brand = BRANDS.find(b => b.id === p.brand);
+  const cartItem = cart.find(c => c.partId === p.id);
+  const qty = cartItem ? cartItem.qty : 0;
+  return `<div class="part-card" id="pcard-${p.id}">
+    <div class="part-card-top">
+      <div class="part-icon">${p.icon}</div>
+      <div class="part-info">
+        <div class="part-name">${p.name}</div>
+        <div class="part-no">${p.partNo}</div>
+        <div class="part-no" style="color:${brand.color};font-weight:600;">${brand.name} &nbsp;|&nbsp; ${cap(p.category)}</div>
+      </div>
+    </div>
+    <div class="part-card-bottom">
+      <div>
+        <div class="part-price">₹${p.price.toLocaleString('en-IN')} <span>/piece</span></div>
+        <div style="font-size:0.7rem;color:${p.stock<5?'var(--deep-red)':'var(--green-ok)'};">
+          ${p.stock > 0 ? `Stock: ${p.stock}` : '⚠ Out of Stock'}
+        </div>
+      </div>
+      <div>
+        ${p.stock > 0 ? `
+        <div class="qty-ctrl" style="margin-bottom:6px;">
+          <button class="qty-btn" onclick="changeQty(${p.id},-1)">−</button>
+          <span class="qty-num" id="qty-${p.id}">${qty}</span>
+          <button class="qty-btn" onclick="changeQty(${p.id},1)">+</button>
+        </div>
+        <button class="add-btn ${qty>0?'added':''}" onclick="addToCart(${p.id})" id="addbtn-${p.id}">
+          ${qty > 0 ? '✓ Added' : 'Add to Cart'}
+        </button>` : `<button class="add-btn" style="background:var(--muted);cursor:not-allowed;">Out of Stock</button>`}
+      </div>
+    </div>
+  </div>`;
+}
+
+function cap(str) { return str.charAt(0).toUpperCase() + str.slice(1); }
+
+// ─── QTY / CART ──────────────────────────────────────────────────────────────
+function changeQty(partId, delta) {
+  const el = document.getElementById(`qty-${partId}`);
+  if (!el) return;
+  const part = partsDB.find(p => p.id === partId);
+  let val = parseInt(el.textContent) + delta;
+  val = Math.max(0, Math.min(val, part.stock));
+  el.textContent = val;
+  const addBtn = document.getElementById(`addbtn-${partId}`);
+  if (addBtn) {
+    if (val > 0) {
+      addBtn.textContent = '✓ Added';
+      addBtn.classList.add('added');
+    } else {
+      addBtn.textContent = 'Add to Cart';
+      addBtn.classList.remove('added');
+      removeFromCart(partId);
+    }
+  }
+}
+
+function addToCart(partId) {
+  const qtyEl = document.getElementById(`qty-${partId}`);
+  let qty = qtyEl ? parseInt(qtyEl.textContent) : 1;
+  if (qty === 0) qty = 1;
+  if (qtyEl) qtyEl.textContent = qty;
+
+  const part = partsDB.find(p => p.id === partId);
+  const existing = cart.find(c => c.partId === partId);
+  if (existing) {
+    existing.qty = qty;
+  } else {
+    cart.push({ partId, qty });
+  }
+  const addBtn = document.getElementById(`addbtn-${partId}`);
+  if (addBtn) { addBtn.textContent = '✓ Added'; addBtn.classList.add('added'); }
+  updateCartCount();
+  showToast(`${part.name} added to order!`, 'success');
+}
+
+function removeFromCart(partId) {
+  cart = cart.filter(c => c.partId !== partId);
+  updateCartCount();
+  renderCartPanel();
+}
+
+function updateCartCount() {
+  const total = cart.reduce((s, c) => s + c.qty, 0);
+  document.getElementById('cart-count').textContent = total;
+}
+
+function openCart() {
+  renderCartPanel();
+  document.getElementById('cart-panel').classList.add('open');
+  document.getElementById('cart-overlay').classList.add('open');
+}
+
+function closeCart() {
+  document.getElementById('cart-panel').classList.remove('open');
+  document.getElementById('cart-overlay').classList.remove('open');
+}
+
+function renderCartPanel() {
+  const body = document.getElementById('cart-body');
+  const foot = document.getElementById('cart-foot');
+  if (cart.length === 0) {
+    body.innerHTML = `<div class="cart-empty"><div class="ei">📦</div><p>Your cart is empty.<br>Browse the catalogue and add parts.</p></div>`;
+    foot.style.display = 'none';
+    return;
+  }
+  let total = 0;
+  body.innerHTML = cart.map(c => {
+    const p = partsDB.find(pp => pp.id === c.partId);
+    if (!p) return '';
+    const brand = BRANDS.find(b => b.id === p.brand);
+    const sub = p.price * c.qty;
+    total += sub;
+    return `<div class="cart-item">
+      <div class="cart-item-icon">${p.icon}</div>
+      <div class="cart-item-details">
+        <div class="cart-item-name">${p.name}</div>
+        <div class="cart-item-brand">${brand.name}</div>
+        <div class="cart-item-price">₹${p.price.toLocaleString('en-IN')} × ${c.qty}</div>
+        <div class="cart-item-qty-ctrl">
+          <button class="qty-btn" onclick="cartQty(${p.id},-1)">−</button>
+          <span>${c.qty}</span>
+          <button class="qty-btn" onclick="cartQty(${p.id},1)">+</button>
+        </div>
+      </div>
+      <div>
+        <div class="cart-item-subtotal">₹${sub.toLocaleString('en-IN')}</div>
+        <button class="cart-remove" onclick="removeFromCart(${p.id})">🗑</button>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('cart-total-amt').textContent = `₹${total.toLocaleString('en-IN')}`;
+  foot.style.display = 'block';
+}
+
+function cartQty(partId, delta) {
+  const item = cart.find(c => c.partId === partId);
+  if (!item) return;
+  const part = partsDB.find(p => p.id === partId);
+  item.qty = Math.max(1, Math.min(item.qty + delta, part.stock));
+  const qtyEl = document.getElementById(`qty-${partId}`);
+  if (qtyEl) qtyEl.textContent = item.qty;
+  updateCartCount();
+  renderCartPanel();
+}
+
+// ─── ORDER MODAL ─────────────────────────────────────────────────────────────
+function openOrderModal() {
+  if (cart.length === 0) return;
+  // Fill summary
+  let total = 0;
+  const items = cart.map(c => {
+    const p = partsDB.find(pp => pp.id === c.partId);
+    const sub = p.price * c.qty;
+    total += sub;
+    return `<div class="osi"><span>${p.name} (×${c.qty})</span><span>₹${sub.toLocaleString('en-IN')}</span></div>`;
+  }).join('');
+  document.getElementById('order-summary-items').innerHTML = items;
+  document.getElementById('order-summary-total').textContent = `₹${total.toLocaleString('en-IN')}`;
+  document.getElementById('order-modal').classList.add('open');
+  document.getElementById('order-modal-body').style.display = 'block';
+}
+
+function closeOrderModal() {
+  document.getElementById('order-modal').classList.remove('open');
+}
+
+function placeOrder() {
+  const name = document.getElementById('cust-name').value.trim();
+  const phone = document.getElementById('cust-phone').value.trim();
+  if (!name || !phone) { showToast('Please enter your name and phone number.', 'error'); return; }
+  // Deduct stock
+  cart.forEach(c => {
+    const p = partsDB.find(pp => pp.id === c.partId);
+    if (p) p.stock = Math.max(0, p.stock - c.qty);
+  });
+  cart = [];
+  updateCartCount();
+  renderMainParts();
+  closeCart();
+  // Check for low stock and fire alerts
+  checkAndAlertLowStock();
+  // Show success
+  document.getElementById('order-modal-body').innerHTML = `
+    <div class="success-screen">
+      <div class="check">✅</div>
+      <h4>Order Placed Successfully!</h4>
+      <p>Thank you, <strong>${name}</strong>!<br>
+      We have received your order and will call you at <strong>${phone}</strong> to confirm.<br><br>
+      Our team will prepare your parts within 24 hours.<br>
+      For urgent orders, please call us directly at <a href="tel:+918630015215" style="color:var(--saffron);">+91 86300 15215</a>.</p>
+      <button onclick="closeOrderModal()" style="margin-top:18px;background:var(--saffron);border:none;color:#fff;padding:10px 24px;border-radius:6px;cursor:pointer;font-family:'Teko',sans-serif;font-size:1rem;">Close</button>
+    </div>`;
+}
+
+// ─── SECTION NAVIGATION ──────────────────────────────────────────────────────
+function showSection(name) {
+  const secs = ['home', 'catalogue', 'about', 'admin'];
+  secs.forEach(s => {
+    const ids = s === 'home'
+      ? ['home-section','home-body-section']
+      : [`${s}-section`];
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
+  });
+
+  if (name === 'home') {
+    document.getElementById('home-section').style.display = 'block';
+    document.getElementById('home-body-section').style.display = 'block';
+    renderBrands();
+    renderMainParts();
+  } else if (name === 'catalogue') {
+    document.getElementById('catalogue-section').style.display = 'block';
+    renderCataloguePage();
+  } else if (name === 'about') {
+    document.getElementById('about-section').style.display = 'block';
+  } else if (name === 'admin') {
+    document.getElementById('admin-section').style.display = 'block';
+  }
+
+  document.querySelectorAll('nav button').forEach((btn, i) => {
+    btn.classList.toggle('active', ['home','catalogue','about','admin'][i] === name);
+  });
+}
+
+// ─── CATALOGUE PAGE ──────────────────────────────────────────────────────────
+function renderCataloguePage() {
+  const tabs = document.getElementById('cat-brand-tabs');
+  tabs.innerHTML = BRANDS.map(b =>
+    `<button class="admin-brand-tab ${catBrandFilter===b.id?'active':''}" onclick="setCatBrand('${b.id}')">${b.icon} ${b.name}</button>`
+  ).join('');
+  const grid = document.getElementById('cat-parts-grid');
+  const parts = partsDB.filter(p => p.brand === catBrandFilter);
+  grid.innerHTML = parts.length ? parts.map(p => renderPartCard(p)).join('') : `<div style="color:var(--muted);padding:20px;">No parts listed for this brand yet.</div>`;
+}
+
+function setCatBrand(id) {
+  catBrandFilter = id;
+  renderCataloguePage();
+}
+
+// ─── CATEGORY FILTER ─────────────────────────────────────────────────────────
+function filterCategory(cat, btn) {
+  selectedCategoryFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMainParts();
+}
+
+// ─── ADMIN ───────────────────────────────────────────────────────────────────
+const ADMIN_PIN = '1234';
+
+function loginAdmin() {
+  const pin = document.getElementById('admin-pass').value;
+  if (pin === ADMIN_PIN) {
+    document.getElementById('admin-gate').style.display = 'none';
+    document.getElementById('admin-content').style.display = 'block';
+    document.getElementById('logout-btn').classList.remove('hidden');
+    renderAdminBrandTabs();
+    renderAdminTable(adminBrandFilter);
+    populateNewBrandSelect();
+  } else {
+    document.getElementById('admin-error').style.display = 'block';
+    setTimeout(() => document.getElementById('admin-error').style.display = 'none', 2500);
+  }
+}
+
+function logoutAdmin() {
+  document.getElementById('admin-gate').style.display = 'block';
+  document.getElementById('admin-content').style.display = 'none';
+  document.getElementById('logout-btn').classList.add('hidden');
+  document.getElementById('admin-pass').value = '';
+}
+
+function renderAdminBrandTabs() {
+  const tabs = document.getElementById('admin-brand-tabs');
+  tabs.innerHTML = BRANDS.map(b =>
+    `<button class="admin-brand-tab ${adminBrandFilter===b.id?'active':''}" onclick="setAdminBrand('${b.id}')">${b.icon} ${b.name}</button>`
+  ).join('');
+}
+
+function setAdminBrand(id) {
+  adminBrandFilter = id;
+  renderAdminBrandTabs();
+  renderAdminTable(id);
+}
+
+function renderAdminTable(brandId) {
+  const parts = partsDB.filter(p => p.brand === brandId);
+  const tbody = document.getElementById('admin-parts-body');
+  tbody.innerHTML = parts.map(p => `<tr id="row-${p.id}" class="${p.stock < LOW_STOCK_THRESHOLD ? 'low-stock-row' : ''}">
+    <td><input class="admin-edit-input" id="e-name-${p.id}" value="${p.name}"></td>
+    <td><input class="admin-edit-input" id="e-partno-${p.id}" value="${p.partNo}" style="max-width:140px;"></td>
+    <td>
+      <select class="admin-edit-input" id="e-cat-${p.id}" style="max-width:130px;">
+        ${['engine','transmission','hydraulic','electrical','filters','linkage','brakes'].map(c=>`<option value="${c}"${p.category===c?' selected':''}>${cap(c)}</option>`).join('')}
+      </select>
+    </td>
+    <td><input class="admin-edit-input" id="e-price-${p.id}" type="number" value="${p.price}" style="max-width:90px;"></td>
+    <td><input class="admin-edit-input" id="e-stock-${p.id}" type="number" value="${p.stock}" style="max-width:70px;" class="${p.stock < LOW_STOCK_THRESHOLD ? 'stock-warn' : ''}"></td>
+    <td>
+      <button class="save-row-btn" onclick="saveRow(${p.id})">Save</button>
+      <button class="del-row-btn" onclick="deleteRow(${p.id})">Del</button>
+    </td>
+  </tr>`).join('');
+}
+
+function saveRow(id) {
+  const p = partsDB.find(pp => pp.id === id);
+  if (!p) return;
+  p.name     = document.getElementById(`e-name-${id}`).value.trim();
+  p.partNo   = document.getElementById(`e-partno-${id}`).value.trim();
+  p.category = document.getElementById(`e-cat-${id}`).value;
+  p.price    = parseInt(document.getElementById(`e-price-${id}`).value) || 0;
+  p.stock    = parseInt(document.getElementById(`e-stock-${id}`).value) || 0;
+  showToast('Part updated successfully!', 'success');
+  renderMainParts();
+  checkAndAlertLowStock();
+}
+
+function deleteRow(id) {
+  if (!confirm('Delete this part from inventory?')) return;
+  partsDB = partsDB.filter(p => p.id !== id);
+  renderAdminTable(adminBrandFilter);
+  renderMainParts();
+  showToast('Part removed.', 'success');
+}
+
+function populateNewBrandSelect() {
+  const sel = document.getElementById('new-brand');
+  sel.innerHTML = BRANDS.map(b => `<option value="${b.id}">${b.name}</option>`).join('');
+}
+
+function addNewPart() {
+  const name  = document.getElementById('new-name').value.trim();
+  const partNo= document.getElementById('new-partno').value.trim();
+  const brand = document.getElementById('new-brand').value;
+  const cat   = document.getElementById('new-category').value;
+  const price = parseInt(document.getElementById('new-price').value) || 0;
+  const stock = parseInt(document.getElementById('new-stock').value) || 0;
+  const icon  = document.getElementById('new-icon').value.trim() || '🔩';
+  if (!name || !partNo) { showToast('Enter at least a part name and part number.', 'error'); return; }
+  const newId = Math.max(0, ...partsDB.map(p => p.id)) + 1;
+  partsDB.push({ id: newId, brand, name, partNo, category: cat, price, stock, icon });
+  ['new-name','new-partno','new-price','new-stock','new-icon'].forEach(id => document.getElementById(id).value = '');
+  renderAdminTable(brand);
+  setAdminBrand(brand);
+  renderMainParts();
+  renderBrands();
+  showToast(`${name} added to inventory!`, 'success');
+}
+
+// ─── TOAST ───────────────────────────────────────────────────────────────────
+let toastTimer;
+function showToast(msg, type='') {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = `toast ${type} show`;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2800);
+}
+
+// ─── LOW STOCK ALERT SYSTEM ──────────────────────────────────────────────────
+const OPERATOR_EMAIL  = 'jaibholetractors@gmail.com';
+const OPERATOR_WHATSAPP = '918630015215'; // country code + number, no +
+const LOW_STOCK_THRESHOLD = 5;
+
+// Track which part IDs we've already notified about (to avoid repeat popups)
+let alertedPartIds = new Set();
+
+function getLowStockParts() {
+  return partsDB.filter(p => p.stock < LOW_STOCK_THRESHOLD);
+}
+
+function checkAndAlertLowStock() {
+  const lowParts = getLowStockParts();
+  // Find any newly fallen-below parts that haven't been alerted yet
+  const newAlerts = lowParts.filter(p => !alertedPartIds.has(p.id));
+
+  // Update the bell indicator for ALL low stock parts
+  updateAlertBell(lowParts);
+
+  if (newAlerts.length > 0) {
+    // Mark them as alerted
+    newAlerts.forEach(p => alertedPartIds.add(p.id));
+    // Show the alert modal after a short delay (so order success screen shows first)
+    setTimeout(() => openAlertModal(), 1200);
+  }
+}
+
+function updateAlertBell(lowParts) {
+  const bell = document.getElementById('alert-bell-btn');
+  const bellCount = document.getElementById('alert-bell-count');
+  if (!bell) return;
+  if (lowParts.length > 0) {
+    bell.classList.add('visible');
+    bellCount.textContent = lowParts.length;
+  } else {
+    bell.classList.remove('visible');
+  }
+}
+
+function buildAlertMessage(lowParts) {
+  const lines = lowParts.map(p => {
+    const brand = BRANDS.find(b => b.id === p.brand);
+    return `• ${p.name} (${brand ? brand.name : p.brand}) — Part No: ${p.partNo} — Stock: ${p.stock} pcs`;
+  });
+  return `🔔 LOW STOCK ALERT – Jai Bhole Tractors\n\nThe following parts are running low (below ${LOW_STOCK_THRESHOLD} units):\n\n${lines.join('\n')}\n\nPlease reorder at the earliest.\n\n– Jai Bhole Tractors Inventory System\nMain By-Pass Road, Kiraoli, Agra – 283122`;
+}
+
+function openAlertModal() {
+  const lowParts = getLowStockParts();
+  if (lowParts.length === 0) {
+    showToast('All parts are adequately stocked ✓', 'success');
+    return;
+  }
+
+  // Render parts list
+  const listEl = document.getElementById('alert-parts-list');
+  listEl.innerHTML = lowParts.map(p => {
+    const brand = BRANDS.find(b => b.id === p.brand);
+    return `<div class="alert-part-row">
+      <div class="alert-part-icon">${p.icon}</div>
+      <div class="alert-part-info">
+        <div class="alert-part-name">${p.name}</div>
+        <div class="alert-part-meta">${brand ? brand.name : ''} &nbsp;|&nbsp; Part No: ${p.partNo} &nbsp;|&nbsp; ${cap(p.category)}</div>
+      </div>
+      <div class="alert-stock-badge ${p.stock === 0 ? 'zero' : ''}">${p.stock === 0 ? '⚠ Out of Stock' : `Only ${p.stock} left`}</div>
+    </div>`;
+  }).join('');
+
+  // Build mailto link
+  const msg = buildAlertMessage(lowParts);
+  const subject = encodeURIComponent(`⚠️ Low Stock Alert – Jai Bhole Tractors (${lowParts.length} part${lowParts.length>1?'s':''})`);
+  const body = encodeURIComponent(msg);
+  document.getElementById('alert-email-link').href =
+    `mailto:${OPERATOR_EMAIL}?subject=${subject}&body=${body}`;
+
+  // Build WhatsApp link
+  const waMsg = encodeURIComponent(msg);
+  document.getElementById('alert-wa-link').href =
+    `https://wa.me/${OPERATOR_WHATSAPP}?text=${waMsg}`;
+
+  document.getElementById('alert-intro-text').textContent =
+    `⚠️ ${lowParts.length} part${lowParts.length>1?'s are':' is'} running below ${LOW_STOCK_THRESHOLD} units in stock. Click the buttons below to notify the operator immediately.`;
+
+  document.getElementById('alert-modal').classList.add('open');
+}
+
+function closeAlertModal() {
+  document.getElementById('alert-modal').classList.remove('open');
+}
+
+// ─── INIT ────────────────────────────────────────────────────────────────────
+renderBrands();
+renderMainParts();
+// Run low stock check on page load (show bell if any parts already low)
+updateAlertBell(getLowStockParts());
+</script>
+</body>
+</html>
